@@ -1,0 +1,49 @@
+PROJECT OVERVIEW: Food Inventory Manager
+
+Food Inventory Manager is a mobile application developed using React Native that helps users manage their food items. The app allows users to perform the following actions:
+
+Add New Food Items: Users can add new food items to the inventory by providing the name of the food item.
+Delete Existing Food Items: Users can delete food items from the inventory if they are no longer needed.
+Update Availability Status: Users can mark food items as unavailable (inactive) when they are out of stock and reactivate them when they become available again.
+
+PROJECT STRUCTURE
+The project consists of the following main components:
+
+App.js: The entry point of the application. It sets up the navigation between different screens using React Navigation.
+Screens:
+FoodListScreen.js: Displays the list of food items and provides options to delete items or toggle their availability status.
+AddFoodItemScreen.js: Provides a form to add new food items to the inventory.
+EditFoodItemScreen.js: (Optional) Provides functionality to edit existing food items.
+
+
+WORKING - 
+FoodListScreen:
+
+Displays a list of food items using a FlatList component.
+Each item in the list shows the name of the food item and its availability status.
+Includes buttons to delete the food item or toggle its availability status.
+A button at the bottom navigates to the AddFoodItemScreen.
+AddFoodItemScreen:
+
+Contains a text input field for the user to enter the name of the new food item.
+Includes a button to add the food item to the inventory.
+On submission, the new food item is added to the list, and the user is navigated back to the FoodListScreen.
+State Management:
+
+Uses React's useState hook to manage the list of food items and their states.
+State updates (adding, deleting, toggling availability) are handled within the respective screens and passed down as props or through navigation parameters.
+
+
+EXAMPLE USAGE -
+Launching the App:
+
+The user opens the app and is presented with a list of food items on the FoodListScreen.
+Adding a Food Item:
+
+The user clicks the "Add Food Item" button, navigates to the AddFoodItemScreen, enters the food item name, and clicks "Add Food Item".
+The app navigates back to the FoodListScreen, and the new item appears in the list.
+Managing Food Items:
+
+The user can delete an item by clicking the "Delete" button next to it.
+The user can toggle the availability status by clicking the "Mark Unavailable" or "Mark Available" button.
+This application provides a simple yet effective way to manage food inventory, helping users keep track of available and unavailable items efficiently.
