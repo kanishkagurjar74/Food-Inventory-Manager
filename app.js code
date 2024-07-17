@@ -1,0 +1,29 @@
+You need to include the App.js file in your project as it serves as the entry point for your React Native application. The App.js file sets up the navigation and renders the initial screen of your app.
+
+Here's a full recap of the App.js file along with the other necessary components to create a simple mobile application using React Native that allows users to add, delete, and manage the availability status of food items:
+
+
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import FoodListScreen from './screens/FoodListScreen';
+import AddFoodItemScreen from './screens/AddFoodItemScreen';
+import EditFoodItemScreen from './screens/EditFoodItemScreen';
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="FoodList">
+        <Stack.Screen name="FoodList" component={FoodListScreen} />
+        <Stack.Screen name="AddFoodItem" component={AddFoodItemScreen} />
+        <Stack.Screen name="EditFoodItem" component={EditFoodItemScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
